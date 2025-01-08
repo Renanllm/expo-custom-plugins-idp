@@ -9,13 +9,21 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.app.custom-plugins-app",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "fetch",
+          "remote-notification"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.app.custompluginsapp"
     },
     "web": {
       "bundler": "metro",
@@ -32,6 +40,42 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "./plugins/withExtensionPlugin",
+        [
+          {
+            "ios": {
+              "extensionTargetName": "NotificationContentExtension",
+              "baseBundleId": "com.app.custom-plugins-app",
+              "pointIdentifier": "com.apple.usernotifications.content-extension",
+              "isBaselproj": true,
+              "frameworks": [
+                "System/Library/Frameworks/UserNotificationsUI.framework",
+                "System/Library/Frameworks/UserNotifications.framework"
+              ],
+              "sourceDir": "./plugins/scripts/notifications/ios/NotificationContentExtension",
+              "buildPhases": [
+                {
+                  "type": "PBXSourcesBuildPhase",
+                  "name": "Sources"
+                },
+                {
+                  "type": "PBXResourcesBuildPhase",
+                  "name": "Resources"
+                },
+                {
+                  "type": "PBXFrameworksBuildPhase",
+                  "name": "Frameworks"
+                }
+              ],
+              "buildSettings": {
+                "SWIFT_VERSION": 5,
+                "IPHONEOS_DEPLOYMENT_TARGET": 15
+              }
+            }
+          }
+        ]
       ]
     ],
     "experiments": {

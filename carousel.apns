@@ -1,0 +1,11 @@
+{
+  "Simulator Target Bundle": "com.app.custom-plugins-app",
+  "aps": {
+    "badge": 0,
+    "alert": {
+      "title": "Count Notification",
+      "body": "Count notification body"
+    },
+    "category": "CountNotification"
+  },
+}
