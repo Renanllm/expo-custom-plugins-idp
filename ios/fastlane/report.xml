@@ -5,17 +5,17 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000179">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000188">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: npm install" time="4.119895">
+      <testcase classname="fastlane.lanes" name="1: npm install" time="5.158312">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: npm test" time="17.091598">
+      <testcase classname="fastlane.lanes" name="2: npm test" time="1.602208">
         
       </testcase>
     
