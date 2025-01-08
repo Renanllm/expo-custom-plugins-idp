@@ -36,5 +36,8 @@ jobs:
     - name: Install Fastlane
       run: gem install fastlane
 
+    - name: Change Directory to iOS
+      run: cd ios
+
     - name: Run Fastlane Tests
       run: fastlane run_tests
